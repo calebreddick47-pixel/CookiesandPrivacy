@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Privacy Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="quiz-page">
+
+<!--The Navigation Menu-->
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="tracking.html">Tracking</a></li>
+        <li><a href="concepts.html">Key Concepts</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+    </ul>
+</nav>
+
+<!--Title-->
+<h1>Cookies and Privacy Quiz</h1>
+
+<form id="quizForm">
+
+    <!--Question 1-->
+    <p>1. Cookies are small pieces of ________ that are stored on a user's device.</p>
+    <input type="text" id="q1">
+
+
+    <!--Question 2-->
+    <p>2. What do Cookies do?</p>
+    <input type="radio" name="q2" value="a"> It installs software on a user's device<br>
+    <input type="radio" name="q2" value="b"> It tracks a user's activity<br>
+    <input type="radio" name="q2" value="c"> It cleans a user's device<br>
+
+
+    <!--Question 3-->
+    <p>3. What exactly is a session cookie?</p>
+    <input type="radio" name="q3" value="a"> A cookie that is erased when the browser is closed<br>
+    <input type="radio" name="q3" value="b"> A cookie that stores a user's preferences forever<br>
+    <input type="radio" name="q3" value="c"> A cookie that tracks a user's behavior across different websites<br>
+
+
+    <!--Question 4-->
+    <p>4. Why are cookies used on websites?</p>
+    <input type="radio" name="q4" value="a"> They are used to remember a user's preference<br>
+    <input type="radio" name="q4" value="b"> They are used to permanately store large files on a user's device<br>
+    <input type="radio" name="q4" value="c"> They are used to damage a user's device<br>
+
+
+    <!--Question 5-->
+    <p>5. Which of the following is true about cookies?</p>
+    <input type="checkbox" name="q5" value="a"> Cookies are used for tracking users<br>
+    <input type="checkbox" name="q5" value="b"> All cookies are harmful to your device and will compromise your privacy<br>
+    <input type="checkbox" name="q5" value="c"> Cookies are primarilly utilized to improve the user experience<br>
+
+    <br><br>
+
+
+    <!--Buttons-->
+    <button type="button" onclick="submitQuiz()">Submit</button>
+    <button type="button" onclick="resetQuiz()">Reset</button>
+
+
+</form>
+
+
+<!--The Results-->
+<div id="results"></div>
+
+<!--Link JavaScript File-->
+<script src="quiz.js"></script>
+
+</body>
+</html>
