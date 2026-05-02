@@ -10,7 +10,7 @@ function submitQuiz(){
         score++;
         results+="<p style='color:green;'>Q1: Correct</p>";
     } else{
-        results+="<p style='color:red;'>Q1: Incorrect (Answer:data)</p>";
+        results+="<p style='color:red;'>Q1: Incorrect (Answer: data)</p>";
     }
 
 
@@ -21,7 +21,7 @@ function submitQuiz(){
         score++;
         results+="<p style='color:green;'>Q2: Correct</p>";
     } else{
-        results+="<p style='color:red;'>Q2: Incorrect</p>";
+        results+="<p style='color:red;'>Q2: Incorrect (Answer: b)</p>";
     }
 
 
@@ -32,7 +32,7 @@ function submitQuiz(){
         score++;
         results+="<p style='color:green;'>Q3: Correct</p>";
     } else{
-        results+="<p style='color:red;'>Q3: Incorrect</p>";
+        results+="<p style='color:red;'>Q3: Incorrect (Answer: a)</p>";
     }
 
     
@@ -44,7 +44,7 @@ function submitQuiz(){
          results+="<p style='color:green;'>Q4: Correct</p>";
     
     } else{
-        results+="<p style='color:red;'>Q4: Incorrect</p>";
+        results+="<p style='color:red;'>Q4: Incorrect (Answer: a)</p>";
     }
 
 

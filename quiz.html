@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Privacy Quiz</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,9 +17,11 @@
         <li><a href="concepts.html">Key Concepts</a></li>
         <li><a href="references.html">References</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="quiz.html" class="active">Quiz</a></li>
     </ul>
 </nav>
+
+<div class="container">
 
 <!--Title-->
 <h1>Cookies and Privacy Quiz</h1>
@@ -69,10 +72,15 @@
 
 
 <!--The Results-->
-<div id="results"></div>
+<div id="results">
+    <h3>Potential Results</h3>
+    <p id="score-output"></p>
+</div>
 
 <!--Link JavaScript File-->
 <script src="quiz.js"></script>
+
+</div>
 
 <!--Footer-->
 <footer>

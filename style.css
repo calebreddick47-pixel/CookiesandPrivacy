@@ -2,16 +2,27 @@
 body {
     font-family: Arial, sans-serif;   /*--Sets the font for the entire page--*/
     margin: 0;                       /*--Removes default margin around the body--*/
-    background-color: #f4f4f4;     /*--Sets a light gray background color for the page--*/
+    background:linear-gradient(to right,#f4f4f4,#e8ecf1);     /*--Sets a light gray background color for the page--*/
+    color: #333;
+}
+
+
+.container{
+    background-color: white;        /*--This entire section is here to box up my main information--*/
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /*--Navigation Styles--*/
 nav ul {
     display: flex;                    /*--Uses flexbox to arrange navigation items in a row--*/
     list-style-type: none;            /*--Removes default bullet points from the list--*/
-    background-color: #333;         /*--Sets a dark background color for the navigation bar--*/
+    background: color #2c3e50;        /*--Sets a dark background color for the navigation bar--*/
     margin: 0;
-    padding: 10px;
+    padding: 12px;
+    justify-content: center;
 }
 
 nav ul li {
@@ -19,25 +30,42 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;           /*--Removes underline from navigation links--*/
-    color: white;                  /*--Sets the text color of navigation links to white--*/
-    padding: 5px;                     /*--Adds padding around navigation links for better clickability--*/
+    position: relative;
 }
+
 /*--Hover Effect for Navigation Links--*/
 nav ul li a:hover {
-    background-color: #555;                    /*--Changes background color on hover for better user interaction--*/
-    border-radius: 5px;                          /*--Adds rounded corners to the navigation links on hover--*/
+    background-color: #3498db;                    /*--Changes background color on hover for better user interaction--*/
+    border-radius: 6px;                        /*--Adds rounded corners to the navigation links on hover--*/
+}
+
+/*--Active page--*/
+nav ul li a.active{
+    background-color: #2980b9;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+nav ul li a.active::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    background-color: #3498db;
+    border-radius: 2px;
 }
 
 /*-- Headings --*/
 
 h1 {
-    color: darkblue;                           /*--Sets the text color of h1 headings to dark blue--*/
+    color: #2c3e50;                           /*--Sets the text color of h1 headings to dark blue--*/
     margin: 20px;                                /*--Adds margin around h1 headings for better spacing--*/
 }
 
 h2 {
-    color: darkblue;                           /*--Sets the text color of h2 headings to dark blue--*/
+    color: #34495e;                           /*--Sets the text color of h2 headings to dark blue--*/
     margin: 20px;                                /*--Adds margin around h2 headings for better spacing--*/
 }
 
@@ -52,6 +80,9 @@ p,ul,ol {
 img {
     margin: 20px;                                /*--Adds margin around images for better spacing--*/
     border: 2px solid #ccc;                     /*--Adds a solid border around images--*/
+    border-radius: 8px;
+    max-width: 100%;                             /*--Added width and height to make the images more responsive--*/
+    height: auto;
 }
 
 /*--Table Styles--*/
@@ -60,11 +91,23 @@ table {
     border-collapse: collapse;                    /*--Collapses borders between table cells for a cleaner look--*/
     background-color: white;                    /*--Sets the background color of the table to white--*/
     margin: 20px;                                 /*--Adds margin around the table for better spacing--*/
+    width: 100%;                                  /*--Added this section to table styles to fix the tables for mobile--*/
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th{
+    background-color: #3498db;
+    color: white;
 }
 
 th, td {
     border: 1px solid black;                   /*--Adds a solid border around table headers and cells--*/
     padding: 10px;                               /*--Adds padding inside table headers and cells for better readability--*/
+}
+
+.table-container{ 
+    overflow-x: auto;
 }
 
 /*--Footer Styles--*/
@@ -86,6 +129,7 @@ footer {
 #main-title {
     font-size: 32px;                           /*--Sets the font size of the element with the ID --*/
 }
+
 
 /*--Quiz page add ons--*/
 
@@ -114,20 +158,97 @@ footer {
 
 .quiz-page button{
     margin-top: 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.quiz-page button:hover{
+    background-color: #2980b9;
 }
 
 /*--Results Section--*/
 
 .quiz-page #results{
     margin-top: 20px;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    border-left: 6px solid #3498db;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    font-weight: bold;
 }
 
 /*--Highlighted Results--*/
 .quiz-page #results{
     margin-bottom: 10px;
 }
+
+.quiz-page input[type="text"],
+.quiz-page button{
+    width: 100%;
+    max-width: 400px;
+    display: block;
+}
+
+.quiz-page label{
+    display: block;
+    margin-top: 10px;
+}
+
+
+
+/*--The media queries--*/
+
+/*--The Phone View--*/
+
+@media(max-width:600px){
+
+    body{
+        font-size: 14px;
+    }
+
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li{
+        margin: 10px 0;
+    }
+
+    h1,h2,h3{
+        text-align: center;
+    }
+
+    p,ul,ol{
+        margin: 10px;
+    }
+}
+
+
+
+
+/*--The Tablet View--*/
+
+@media (max-width:900px){
+    
+    body{
+        font-size: 16px;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+
 
 
 
